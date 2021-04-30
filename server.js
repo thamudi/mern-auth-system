@@ -23,10 +23,11 @@ connectDb();
 const app = express();
 // Load routes
 const authRouter = require('./routes/auth.route');
+const userRouter = require('./routes/user.route')
 // Get port from env config
 const PORT = process.env.PORT;
 // Development config
-if (process.NODE_ENV === 'development') {
+if (process.env.NODE_ENV === 'development') {
     app.use(cors({
         origin: process.env.CLIENT_URL
     }));
@@ -45,6 +46,7 @@ Express Middleware
 app.use(bodyParser.json());
 // Use Routes
 app.use('/api/', authRouter);
+app.use('/api/', userRouter);
 app.use((req, res, next) => {
     res.status(404).json({
         success: false,
@@ -55,5 +57,7 @@ app.use((req, res, next) => {
 // App start
 app.listen(PORT, () => {
     console.log('======================================');
-    console.info(`Server started on ${PORT}`);
+    console.info(`Server started on port: ${PORT}`);
+    console.info(`Node Env: ${process.env.NODE_ENV}`);
+    console.info(`Client URL: ${process.env.CLIENT_URL}`);
 });

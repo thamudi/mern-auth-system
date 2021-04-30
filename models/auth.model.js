@@ -43,7 +43,7 @@ const userSchema = new mongoose.Schema({
 // virtual password 
 //TODO: check
 userSchema.virtual('password').set(function (password) {
-    this.password = password;
+    this._password = password;
     this.salt = this.makeSalt();
     this.hashed_password = this.encryptPassword(password);
 }).get(function () {
@@ -75,7 +75,7 @@ userSchema.methods = {
 
     //Compare password between plain and get user hashed password
     authenticate: function (plainPassword) {
-        return this.encryptPassword(plainPassword) === this.plainPassword;
+        return this.encryptPassword(plainPassword) === this.hashed_password;
     }
 }
 
