@@ -1,0 +1,38 @@
+{
+  "name": "mern-auth-system",
+  "version": "1.0.0",
+  "description": "A MERN application for users to register, sign in, send complaints, and an Admin panel to view such complaints",
+  "main": "server.js",
+  "scripts": {
+    "start": "NODE_ENV=production node server",
+    "dev": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thamudi/mern-auth-system.git"
+  },
+  "author": "thamudi",
+  "license": "GPLV3",
+  "bugs": {
+    "url": "https://github.com/thamudi/mern-auth-system/issues"
+  },
+  "homepage": "https://github.com/thamudi/mern-auth-system#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-jwt": "^6.0.0",
+    "express-validator": "^6.10.1",
+    "google-auth-library": "^7.0.4",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "mongoose": "^5.12.7",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.1",
+    "nodemailer": "^6.6.0",
+    "nodemailer-express-handlebars": "^4.0.0",
+    "path": "^0.12.7"
+  }
+}
