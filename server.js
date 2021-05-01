@@ -23,18 +23,14 @@ connectDb();
 const app = express();
 // Load routes
 const authRouter = require('./routes/auth.route');
-const userRouter = require('./routes/user.route')
+const userRouter = require('./routes/user.route');
+
 // Get port from env config
 const PORT = process.env.PORT;
 // Development config
 if (process.env.NODE_ENV === 'development') {
-    app.use(cors({
-        origin: process.env.CLIENT_URL
-    }));
-
     app.use(morgan('dev'));
     // Morgan will be used to give info about each request
-    // Cors will be used to enable us to work with react localhost on port 3000 without any issues.
 }
 
 /* 
@@ -42,6 +38,8 @@ if (process.env.NODE_ENV === 'development') {
 Express Middleware
 ------------------ 
 */
+// Enable cors for the client
+app.use(cors({ origin: process.env.CLIENT_URL }));
 // Use bodyParser 
 app.use(bodyParser.json());
 // Use Routes
