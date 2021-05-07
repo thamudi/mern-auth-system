@@ -82,7 +82,7 @@ const Admin = ({ history }) => {
             </h1>
 
             <form
-              className='w-full flex-1 mt-8 text-indigo-500'
+              className='w-full flex-1 mt-8 text-blue-500'
               onSubmit={handleSubmit}
             >
               <div className='mx-auto max-w-xs relative '>
@@ -117,7 +117,7 @@ const Admin = ({ history }) => {
                 />
                 <button
                   type='submit'
-                  className='mt-5 tracking-wide font-semibold bg-indigo-500 text-gray-100 w-full py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none'
+                  className='mt-5 tracking-wide font-semibold bg-blue-500 text-gray-100 w-full py-4 rounded-lg hover:bg-blue-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none'
                 >
                   <i className='fas fa-user-plus fa 1x w-6  -ml-2' />
                   <span className='ml-3'>{textChange}</span>
@@ -131,11 +131,11 @@ const Admin = ({ history }) => {
               <div className='flex flex-col items-center'>
                 <a
                   className='w-full max-w-xs font-bold shadow-sm rounded-lg py-3
-           bg-indigo-100 text-gray-800 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline mt-5'
+           bg-blue-100 text-gray-800 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline mt-5'
                   href='/'
                   target='_self'
                 >
-                  <i className='fas fa-sign-in-alt fa 1x w-6  -ml-2 text-indigo-500' />
+                  <i className='fas fa-sign-in-alt fa 1x w-6  -ml-2 text-blue-500' />
                   <span className='ml-4'>Home</span>
                 </a>
               </div>
